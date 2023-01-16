@@ -1,1 +1,26 @@
+O(N^2)
 
+def removeDuplicates(head):
+    temp = head
+    while temp:
+        while temp.next and temp.data == temp.next.data:
+            temp.next = temp.next.next
+        temp = temp.next
+        
+    return head
+
+
+O(N)
+
+def removeDuplicates(llist):    
+    l=[]
+    node = llist
+    while node:
+        if node.data in l:
+            previous.next=node.next
+            node = node.next
+        else:
+            previous=node
+            l.append(node.data)
+            node=node.next
+    return llist
