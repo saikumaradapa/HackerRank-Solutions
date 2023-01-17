@@ -1,0 +1,26 @@
+
+
+
+def getNode(head, count):
+    start = head
+    while count > 0:
+        head = head.next
+        count -= 1
+    
+    result = start
+    while head.next is not None:
+        head = head.next
+        result = result.next
+        
+    return result.data
+    
+    
+    
+    
+def getNode(llist, positionFromTail):
+    head=llist
+    arr=[]
+    while head is not None:
+        arr.insert(0,head.data)
+        head=head.next
+    return arr[positionFromTail]
