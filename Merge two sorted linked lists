@@ -1,0 +1,19 @@
+   
+def mergeLists(head1, head2):
+    p1=head1
+    p2=head2
+    node=SinglyLinkedList()
+    while p1 and p2:
+        if p1.data<=p2.data:
+            node.insert_node(p1.data)
+            p1=p1.next
+        else:
+            node.insert_node(p2.data)
+            p2=p2.next
+    while p1:
+        node.insert_node(p1.data)
+        p1=p1.next
+    while p2:
+        node.insert_node(p2.data)
+        p2=p2.next   
+    return node.head
