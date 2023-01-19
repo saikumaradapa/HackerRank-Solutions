@@ -1,0 +1,12 @@
+def getMoneySpent(keyboards, drives, b):
+    possible_keyboards = [i for i in keyboards if i < b]
+    possible_drives = [i for i in drives if i < b]
+    matches = []
+    for k in possible_keyboards:
+        for d in possible_drives:
+            if (d+k) <= b:
+                matches.append(d+k)
+    if len(matches) == 0:
+        return -1
+    else:
+        return max(matches)
