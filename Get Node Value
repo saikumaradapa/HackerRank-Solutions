@@ -1,4 +1,14 @@
 
+def getNode(head, count):
+    ptr = head 
+    list = []
+    while ptr.next :
+        list.append(ptr.data)
+        ptr = ptr.next 
+    list.append(ptr.data)    
+    return list[-count-1]
+
+
 
 
 def getNode(head, count):
