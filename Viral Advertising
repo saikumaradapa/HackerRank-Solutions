@@ -1,0 +1,6 @@
+def viralAdvertising(k):
+    n,s=2,0
+    for i in range(k):
+        s = s+n
+        n = (n*3)//2
+    return s
