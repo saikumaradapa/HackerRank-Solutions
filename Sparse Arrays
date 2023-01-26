@@ -1,0 +1,27 @@
+def matchingStrings(stringList, queries):
+    result = []
+    for querie in queries:
+        result.append((stringList.count(querie)))
+    return result
+    
+    
+    
+    
+    
+def matchingStrings(stringList, queries):
+    return [stringList.count(i)for i in queries]
+    
+    
+    
+    
+    
+def matchingStrings(stringList, queries):
+    finallist=[]
+    count=0
+    for query in queries:
+        for word in stringList:
+            if query == word:
+                count=count+1
+        finallist.append(count)
+        count=0
+    return finallist
