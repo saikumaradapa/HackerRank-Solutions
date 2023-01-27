@@ -25,3 +25,17 @@ def pickingNumbers(a):
         maxi = max(maxi, arr[i]+arr[i+1] ) 
         print(i,i+1,"-->",arr[i],arr[i+1])  
     return maxi
+
+
+
+
+from collections import Counter
+def pi(a):
+    result = 0
+    counter = Counter(a)
+    for i in counter:
+        plus_seq = 0
+        if i+1 in counter:
+            plus_seq = counter[i] + counter[i+1]
+        result = max(result, plus_seq)            
+    return result
