@@ -1,0 +1,27 @@
+# we have to pick numbers such that their difference will be less than or equal to 1 
+# then return (number that) the length of the longest subarray that meets the criterion
+
+
+
+from collections import Counter
+def pickingNumbers(a):
+    arr = Counter(a)
+    maxi = 0
+    for i in range(len(a)+1) :
+        maxi = max(maxi, arr[i]+arr[i+1] )   
+    return maxi
+    
+    
+    
+    
+    
+    
+# to get clarification 
+from collections import Counter
+def pickingNumbers(a):
+    arr = Counter(a)
+    maxi = 0
+    for i in range(len(a)+1) :
+        maxi = max(maxi, arr[i]+arr[i+1] ) 
+        print(i,i+1,"-->",arr[i],arr[i+1])  
+    return maxi
