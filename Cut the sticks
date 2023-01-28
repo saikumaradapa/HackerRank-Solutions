@@ -13,3 +13,19 @@ def cutTheSticks(arr):
         list.append(n)
         
     return list[:-1]
+
+
+
+
+
+
+
+def cutTheSticks(arr):
+    freq = [0]*1001
+    result = [len(arr)]
+    for x in arr:
+        freq[x] += 1
+    for x in freq:
+        if x > 0:
+            result.append(result[-1] - x)
+    return result[:-1]
