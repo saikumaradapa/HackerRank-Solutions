@@ -1,0 +1,15 @@
+def cutTheSticks(arr):
+    # Write your code here
+    i, n, list = 0, len(arr), []
+    list.append(n)
+    while arr :
+        print(arr)
+        min_stick = min(arr)
+        for i in range(len(arr)) :
+            arr[i] -= min_stick
+        while 0 in arr :
+            arr.remove(0) 
+        n = len(arr)
+        list.append(n)
+        
+    return list[:-1]
