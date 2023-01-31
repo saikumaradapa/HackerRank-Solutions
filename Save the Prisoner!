@@ -1,0 +1,11 @@
+def saveThePrisoner(n, m, s):
+    res = m%n 
+    if (res+s-1) % n == 0 :
+        return n
+    else :
+        return (res+s-1)%n
+        
+        
+        
+def saveThePrisoner(n, m, s):
+    return (s+m-1) % n or n
