@@ -1,0 +1,15 @@
+def repeatedString(s, n):
+    return (n//len(s))*(s.count('a'))+(s[:n%len(s)].count('a'))
+    
+    
+    
+def repeatedString(s, n):
+    a = s.count("a")
+    if n%len(s) == 0:
+        return a*(n//len(s))
+    else:
+        remaind = n%len(s)
+        counter = n//len(s)
+        sub = s[:remaind]
+        sa = sub.count("a")
+        return (counter*a) + sa
