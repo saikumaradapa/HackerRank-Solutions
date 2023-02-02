@@ -1,0 +1,43 @@
+def jumpingOnClouds(c):
+    i = 0
+    pos  = 0 
+    while pos <  len(c)-2 :
+        if c[pos+2] == 1:
+            pos += 1
+        else :
+            pos += 2
+        i += 1
+    if pos == len(c)-1  :
+        return i
+    else  :
+        return i+1
+
+
+
+
+
+
+
+
+
+
+
+# to understand try this 
+
+def jumpingOnClouds(c):
+    i = 0
+    pos  = 0 
+    while pos <  len(c)-2 :
+        print(c,'--->',pos,'       i = ',i)
+        if c[pos+2] == 1:
+            pos += 1
+        else :
+            pos += 2
+        i += 1
+        print(c,'|--->',pos,'           i = ',i)
+    if pos == len(c)-1  :
+        return i
+    else  :
+        return i+1
+    
+   
