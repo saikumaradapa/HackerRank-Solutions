@@ -4,3 +4,13 @@ def serviceLane(n, cases):
     for i,j in cases :
         result.append(min(width[i:j+1]))    
     return result
+    
+    
+    
+    
+    
+    
+    
+    
+def serviceLane(n, cases):
+    return [min(width[case[0]:case[1]+1]) for case in cases]
