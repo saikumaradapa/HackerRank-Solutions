@@ -26,7 +26,6 @@ def getNode(head, count):
     
     
     
-    
 def getNode(llist, positionFromTail):
     head=llist
     arr=[]
